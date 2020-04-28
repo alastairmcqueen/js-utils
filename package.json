@@ -1,0 +1,19 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "Javascript utility functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alastairmcqueen/js-utils.git"
+  },
+  "author": "Alastair McQueen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alastairmcqueen/js-utils/issues"
+  },
+  "homepage": "https://github.com/alastairmcqueen/js-utils#readme"
+}
