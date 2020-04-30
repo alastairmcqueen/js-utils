@@ -1,6 +1,5 @@
-const removeObjectEntries = (obj = {}, keys = []) => Object.keys(obj).reduce((newObj, currentKey) => {
-  if (keys.every(key => key !== currentKey)) newObj[currentKey] = obj[currentKey]
-  return newObj
-}, {})
+const removeObjectEntries = (obj = {}, keys = []) => 
+  Object.keys(obj).reduce((currentObj, currentKey) => 
+    keys.every(key => key !== currentKey) ? { ...currentObj, [currentKey]: obj[currentKey] } : currentObj, {})
 
 export default removeObjectEntries
