@@ -1,4 +1,3 @@
-//TODO: refine keepFields and allowEmpty combination
 import isValue from './is-value'
 
 const removeEmptyValues = (data, keepFields = [], allowEmpty = false) => {
@@ -14,11 +13,12 @@ const removeEmptyValues = (data, keepFields = [], allowEmpty = false) => {
       }
 
       return Object.keys(data).reduce((obj, key) => {
-        const cleanedValue = removeEmptyValues(data[key], keepFields, keepFields.some(fieldKey => fieldKey === key))
+        const allowEmptyField = keepFields.some(fieldKey => fieldKey === key)
+        const cleanedValue = removeEmptyValues(data[key], keepFields, allowEmptyField)
         const cleanedObj = { [key]: cleanedValue }
         const newObj = obj ? { ...obj, ...cleanedObj } : cleanedObj
 
-        return cleanedValue ? newObj : obj
+        return isValue(cleanedValue, allowEmptyField) ? newObj : obj
       }, allowEmpty ? {} : null)
     }
     
