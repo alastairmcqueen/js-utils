@@ -1,4 +1,4 @@
-const debounce = (func, wait, immediate) => {
+const debounce = (func = () => {}, wait = 0, immediate = false) => {
   let timeout
 
   return (...args) => {
