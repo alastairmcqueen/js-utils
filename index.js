@@ -1,3 +1,4 @@
+export { default as debounce } from './utils/debounce'
 export { default as getNestedValueFromString } from './utils/get-nested-value-from-string'
 export { default as isValue } from './utils/is-value'
 export { default as reducePromises } from './utils/reduce-promises'
