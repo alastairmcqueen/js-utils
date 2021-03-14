@@ -21,11 +21,11 @@ const removeEmptyValues = (data, keepFields = [], allowEmpty = false) => {
         return isValue(cleanedValue, allowEmptyField) ? newObj : obj
       }, allowEmpty ? {} : null)
     }
-    
+
     return data
   }
 
   return null
 }
 
-export default removeEmptyValues
+module.exports = removeEmptyValues

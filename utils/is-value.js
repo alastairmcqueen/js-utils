@@ -18,4 +18,4 @@ const isValue = (value, allowEmpty = false) => {
   return (isValidValue || isValidObjOrArr || isNumber || isBoolean || allowEmptyObjOrArr || allowEmptyString)
 }
 
-export default isValue
+module.exports = isValue
